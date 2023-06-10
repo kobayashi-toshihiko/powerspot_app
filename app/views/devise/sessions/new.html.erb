@@ -4,20 +4,30 @@
       <div class="col-10 col-md-6">
         <div><%= image_tag 'ps_logo.png', class: 'img-fluid mt-4', width: '50%', height: '50%' %></div>
         <div class="col-12 text-center pb-2">
-          <p class="w-lg-50 pt-3 fs-3 text-purple">ログイン</p>
+          <p class="w-lg-50 pt-3 fs-3 text-main-color">ログイン</p>
         </div>
       </div>
     </div>
     <div class="row d-flex justify-content-center">
+      <%= form_with model: @user, url: new_user_session_path, class: "row d-flex justify-content-center" do |f| %>
       <div class="col-10 col-md-6">
+        <!--メールアドレス-->
         <p class="text-start text-main fw-bold mb-2 fs-6">メールアドレス</p>
-        <input class="form-control py-md-3 rounded bg-white box-shadow mb-3" type="email">
+        <!--<input class="form-control py-md-3 rounded bg-white box-shadow mb-3" type="email">-->
+        <%= f.email_field :email, autofocus: true, class: "form-control py-md-3 rounded bg-white box-shadow mb-3"  %>
+        
+        <!--パスワード-->
         <p class="text-start text-main fw-bold mb-2 pt-4">パスワード</p>
-        <input class="form-control py-md-3 rounded bg-white box-shadow mb-3" type="password">
+        <!--<input class="form-control py-md-3 rounded bg-white box-shadow mb-3" type="password">-->
+        <%= f.password_field :password, autocomplete: "new-password", class: "form-control py-md-3 rounded bg-white box-shadow mb-3" %>
+
+        <!--ログイン-->
         <div class="my-5 text-center">
-          <button class="btn fw-bold rounded py-3 w-50 text-white" type="submit" style="background: #8365FF;border-style: solid;border-color: #8365FF;">ログイン</button>
+          <!--<button class="btn fw-bold rounded py-3 w-50 text-white" type="submit" style="background: #8365FF;border-style: solid;border-color: #8365FF;">ログイン</button>-->
+          <%= f.submit "ログイン", class: "btn fw-bold rounded py-3 w-50 text-white bg-main" %>
         </div>
       </div>
+      <% end %>
     </div>
   </div>
 </div>

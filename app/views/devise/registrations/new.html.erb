@@ -17,31 +17,26 @@
         <div class="div-title mb-4">
           <p class="title-p fw-bold text-main">ユーザーネーム
           <span class="p_required">必須</span></p>
-          <!--<input class="form-control py-md-3 rounded bg-white box-shadow mb-3" type="text">-->
           <%= f.text_field :username, autofocus: true, class: "form-control py-md-3 rounded bg-white box-shadow mb-3" %>
         </div>
         
         <div class="div-title mb-4">
           <p class="title-p fw-bold text-main">メールアドレス
           <span class="p_required">必須</span></p>
-          <!--<input class="form-control py-md-3 rounded bg-white box-shadow mb-3" type="email">-->
           <%= f.email_field :email, autofocus: true, class: "form-control py-md-3 rounded bg-white box-shadow mb-3" %>
         </div>
         
         <div class="div-title mb-4">
           <p class="title-p fw-bold text-main">パスワード<span class="p_required">必須</span></p>
-          <!--<input class="form-control py-md-3 rounded bg-white box-shadow mb-3" type="password">-->
           <%= f.password_field :password, autocomplete: "new-password", class: "form-control py-md-3 rounded bg-white box-shadow mb-3" %>
         </div>
         
         <div class="div-title mb-4">
           <p class="title-p fw-bold text-main">パスワード確認<span class="p_required">必須</span></p>
-          <!--<input class="form-control py-md-3 rounded bg-white box-shadow mb-3" type="password">-->
           <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control py-md-3 rounded bg-white box-shadow mb-3" %>
         </div>
         <div class="div-title mb-4">
           <p class="title-p fw-bold text-main">生年月日<span class="p_required">必須</span></p>
-          <!--<input class="form-control py-md-3 rounded bg-white box-shadow mb-3" type="password">-->
           <%= f.text_field :birthday, autofocus: true, class: "form-control py-md-3 rounded bg-white box-shadow mb-3" %>
         </div>
         
@@ -129,7 +124,6 @@
         </div>
         <div class="div-title mb-4 mt-4">
           <p class="title-p fw-bold text-main">自己紹介</p>
-          <!--<input class="form-control py-md-3 rounded bg-white box-shadow mb-3" type="text">-->
           <%= f.text_field :profile, autofocus: true, class: "form-control py-md-3 rounded bg-white box-shadow mb-3" %>
         </div>
         

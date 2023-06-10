@@ -11,10 +11,8 @@
               <%= displayed_svg 'new_post.svg' %>
               新規投稿する
             </a>
-            <%#= image_tag 'pikasta・icon6.jpg', class: 'rounded-circle flex-shrink-0 me-3 fit-cover', width: '50px', alt: 'icon6' %>
             <%= image_tag current_user.avatar_url, class: 'rounded-circle flex-shrink-0 me-3 fit-cover', width: '50px', alt: 'icon6' %>
 
-            <!--<p class="pe-2 mt-3 text-purple d-none d-md-block" style="font-size: 14px;">pikasta_2023</p>-->
             <p class="pe-2 mt-3 text-block d-none d-md-block" style="font-size: 14px;"><%= current_user.username%></p>
             <div class="dropdown" style="width: 10px;height: 8px;">
               <a class="dropdown-toggle text-decoration-none text-block d-flex mt-1" aria-expanded="false" data-bs-toggle="dropdown" href="#" style="width: 10px;height: 8px;"></a>
