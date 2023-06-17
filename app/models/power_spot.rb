@@ -1,0 +1,2 @@
+class PowerSpot < ApplicationRecord
+end

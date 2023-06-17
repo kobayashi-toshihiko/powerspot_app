@@ -1,0 +1,2 @@
+class CategoryBlessing < ApplicationRecord
+end
