@@ -5,5 +5,6 @@ class User < ApplicationRecord
   belongs_to :attribute
   has_many :power_spots
   has_many :comments
-  validates :email, :encrypted_password, :reset_password_token, :reset_password_sent_at, :remember_created_at, :username, :birthday, :blood_type, :profile, :avatar, presence: true
+  # 右記の項目に関してはdeviseがデフォルトでバリデーションを定義している為、不要 :email, :encrypted_password, :reset_password_token, :reset_password_sent_at, :remember_created_at
+  validates :username, :birthday, :blood_type, :profile, :avatar, presence: true
 end
