@@ -210,3 +210,21 @@ footer {
 .text-main-color {
   color: #0008C1;
 }
+
+.category p {
+    background-color: #0008C1;
+    font-size: 15px;
+    color: #FFF;
+    padding: 10px 0;
+    font-weight: bold;
+    margin: 0;
+}
+
+.articles p {
+    border: 2px solid #E6CBA8;
+    font-size: 15px;
+    color: #595959;
+    padding: 10px 0;
+    font-weight: bold;
+    margin: 0;
+}

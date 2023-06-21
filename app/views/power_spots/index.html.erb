@@ -1,255 +1,218 @@
 <div class="container">
-  <!--<nav class="navbar navbar-light navbar-expand-md fixed-top bg-white pt-3 pb-3" style="box-shadow: 0px 0px 20px 0px #bfc0da;">-->
-  <!--  <div class="container">-->
-  <!--    <div class="col">-->
-  <!--      <div class="d-flex justify-content-between align-items-center">-->
-  <!--        <div><a href="/"><%#= image_tag 'ps_logo.png', class: 'img-fluid', width: '180px' %></a></div>-->
-  <!--        <div class="d-flex align-items-center">-->
-  <!--          <a class="btn nav-btn me-3 text-block" href="#">パワースポット一覧</a>-->
-  <!--          <a class="btn nav-btn me-3 text-block" href="#">ログイン</a>-->
-  <!--          <a class="btn nav-btn text-white btn-accent me-5 px-3 py-2" href="../users/sign_up" style="font-size: 14px;">無料会員登録</a>-->
-  <!--        </div>-->
-  <!--      </div>-->
-  <!--    </div>-->
-  <!--  </div>-->
-  <!--</nav>-->
   <div class="row justify-content-between">
-    <div class="col-md-7 mt-5">
-      <div class="mt-5">
-        <div class="row">
-          <div class="col mt-5">
-            <div class="card mt-5 bg-white py-3">
-              <div class="d-flex justify-content-between px-4">
-                <div>
-                  <%= image_tag 'pikasta・icon4.jpg', alt: 'icon4', class: 'rounded-circle flex-shrink-0 me-3 fit-cover d-inline-block', width: '59px' %>
-                  <p class="mb-0 fs-5 d-inline-block">name_acount</p>
-                  <p class="text-muted mb-0 fs-5 pt-3 mb-3">新しい家族を迎えました！</p>
-                </div>
-                <div class="dropdown">
-                  <button class="btn text-main bg-white" aria-expanded="false" data-bs-toggle="dropdown" type="button">
-                    <%#= displayed_svg 'config.svg' %>
-                  </button>
-                  <div class="dropdown-menu dropdown-menu-end rounded-3 pt-0 pb-0 mt-2" style="min-width: 107px; border-bottom: 2px solid #D5D5D5;">
-                    <a class="dropdown-item text-main py-3" href="#" style="font-size: 14px;border: 1px solid #D5D5D5;">
-                      <%#= displayed_svg 'detail.svg' %>
-                      詳細
-                    </a>
-                    <a class="dropdown-item text-main py-3" href="#" style="font-size: 14px;border: 1px solid #D5D5D5;">
-                      <%#= displayed_svg 'edit.svg' %>
-                      編集
-                    </a>
-                    <a class="dropdown-item text-main py-3" href="#" style="font-size: 14px; border: 1px solid #D5D5D5;">
-                      <%#= displayed_svg 'delete.svg' %>
-                      削除
-                    </a>
-                  </div>
-                </div>
-              </div>
-              
-              <div class="carousel slide" data-bs-ride="false" id="carousel-5">
-                <div class="carousel-inner" style="height: 635px;">
-                  <div class="carousel-item active img-slide">
-                    <%= image_tag 'pikasta・dog_1.jpg', class: 'w-100 d-block position-absolute carousel-item-image', alt: 'dog1' %>
-                  </div>
-                  <div class="carousel-item img-slide">
-                    <%= image_tag 'pikasta・dog_2.jpg', class: 'w-100 d-block carousel-item-image', alt: 'dog2' %>
-                  </div>
-                  <div class="carousel-item img-slide">
-                    <%= image_tag 'pikasta・dog_3.jpg', class: 'w-100 d-block carousel-item-image', alt: 'dog3' %>
-                  </div>
-                </div>
-                <div>
-                  <a class="carousel-control-prev" href="#carousel-5" role="button" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon"></span>
-                    <span class="visually-hidden">Previous</span>
-                  </a>
-                  <a class="carousel-control-next" href="#carousel-5" role="button" data-bs-slide="next">
-                    <span class="carousel-control-next-icon"></span><span class="visually-hidden">Next</span>
-                  </a>
-                </div>
-                
-                <ol class="carousel-indicators" id="indicators-style-4" style="margin-right: 50%;margin-left: 47%;width: 30px;">
-                  <li data-bs-target="#carousel-5" data-bs-slide-to="0" class="active"></li>
-                  <li data-bs-target="#carousel-5" data-bs-slide-to="1"></li>
-                  <li data-bs-target="#carousel-5" data-bs-slide-to="2"></li>
-                </ol>
-              </div>
-              <div class="card-body d-flex align-items-center" style="padding-top: 5px;padding-bottom: 5px;height: 40px;background: #FFFFFF;">
-                <div class="d-flex justify-content-start">
-                  <a class="text-decoration-none pt-3 pe-3" href="#">
-                    <p class="fs-5 fw-bold mb-0" style="color: #9399E5;">#dog</p>
-                  </a>
-                  <a class="text-decoration-none pt-3 pe-3" href="#">
-                    <p class="fs-5 fw-bold mb-0" style="color: #9399E5;">#animals</p>
-                  </a>
-                  <a class="text-decoration-none pt-3" href="#">
-                    <p class="fs-5 fw-bold mb-0" style="color: #9399E5;">#cute</p>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col" style="min-width: 100%;">
-            <p class="fs-5 pt-4 text-purple">コメント</p>
-            <div class="card box-shadow bg-white rounded-3 border-0 py-3 px-4 mb-4">
-              <div class="d-flex align-items-center pt-3">
-                <%= image_tag 'pikasta・icon1.jpg', alt: 'icon_1', class: 'rounded-circle flex-shrink-0 me-3 fit-cover', width: '35px' %>
-                <div class="d-lg-flex" style="padding-right: 10px;">
-                  <p class="mb-0 fs-6" style="color: #444444;">Flower12345</p>
-                </div>
-                <div class="d-lg-flex">
-                  <p class="mb-0 ps-2 text-main" style="font-size: 14px;">2023.3.10</p>
-                </div>
-              </div>
-              <div class="card-body pb-4 px-0">
-                <p class="card-text text-main pt-2" style="font-size: 14px;">とっても可愛いですね！お部屋もおしゃれで素敵です。私もいつか犬を飼うのが夢です...！！</p>
-              </div>
-            </div>
-            <div class="card box-shadow bg-white rounded-3 border-0 py-3 px-4 mb-4">
-              <div class="d-flex align-items-center pt-3">
-                <%= image_tag 'pikasta・icon4.jpg', alt: 'icon_4', class: 'rounded-circle flex-shrink-0 me-3 fit-cover', width: '35px' %>
-                <div class="d-lg-flex" style="padding-right: 10px;">
-                  <p class="mb-0 fs-6" style="color: #444444;">name_acount</p>
-                </div>
-                <div class="d-lg-flex">
-                  <p class="mb-0 ps-2 text-main" style="font-size: 14px;">2023.3.10</p>
-                </div>
-              </div>
-              <div class="card-body pb-4 px-0">
-                <p class="card-text text-main pt-2" style="font-size: 14px;">ふわふわでたまりませんね♡うちの子に似てる！</p>
-              </div>
-            </div>
-          </div>
-          <div class="col my-4">
-            <div class="card d-flex">
-              <div class="card-body box-shadow py-4">
-                <div class="d-flex justify-content-center align-items-center" style="font-size: 14px;">
-                  <p class="text-main">コメントを入力するには
-                    <a class="text-decoration-none text-purple" href="users/sign_in">ログイン</a>
-                    が必要です
-                  </p>
-                </div>
-                <div class="d-flex justify-content-center">
-                  <p class="d-flex align-items-center text-main" style="margin-bottom: 0px;font-size: 14px;">登録がまだの方は<br></p>
-                  <a class= "btn btn-primary bg-purple border-0 px-4 ms-3" href="users/sign_up">無料会員登録</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div>
-        <div class="row">
-          <div class="col mt-5">
-            <div class="card mt-5 bg-white py-3">
-              <div class="d-flex justify-content-between px-4">
-                <div>
-                  <%= image_tag 'pikasta・icon8.png', alt: 'icon8', class: 'rounded-circle flex-shrink-0 me-3 fit-cover d-inline-block', width: '59px' %>
-                  <p class="mb-0 fs-5 d-inline-block">panda.0205</p>
-                  <p class="text-muted mb-0 fs-5 pt-3 mb-3">海外旅行</p>
-                </div>
-                <div class="dropdown">
-                  <button class="btn text-main bg-white" aria-expanded="false" data-bs-toggle="dropdown" type="button">
-                    <%#= displayed_svg 'config.svg' %>
-                  </button>
-                  <div class="dropdown-menu dropdown-menu-end rounded-3 pt-0 pb-0 mt-2" style="min-width: 107px; border-bottom: 2px solid #D5D5D5;">
-                    <a class="dropdown-item text-main py-3" href="posts/1" style="font-size: 14px;border: 1px solid #D5D5D5;">
-                      <%#= displayed_svg 'detail.svg' %>
-                      詳細
-                    </a>
-                    <a class="dropdown-item text-main py-3" href="posts/1/edit" style="font-size: 14px;border: 1px solid #D5D5D5;">
-                      <%#= displayed_svg 'edit.svg' %>
-                      編集
-                    </a>
-                    <a class="dropdown-item text-main py-3" href="#" style="font-size: 14px; border: 1px solid #D5D5D5;">
-                      <%#= displayed_svg 'delete.svg' %>
-                      削除
-                    </a>
-                  </div>
-                </div>
-              </div>
-              
-              <div class="carousel slide" data-bs-ride="false" id="carousel-6">
-                <div class="carousel-inner" style="height: 635px;">
-                  <div class="carousel-item active img-slide">
-                    <%= image_tag 'pikasta・lake_1.jpg', class: 'w-100 d-block position-absolute carousel-item-image', alt: 'lake1' %>
-                  </div>
-                  <div class="carousel-item img-slide">
-                    <%= image_tag 'pikasta・lake_2.jpg', class: 'w-100 d-block carousel-item-image', alt: 'lake2' %>
-                  </div>
-                  <div class="carousel-item img-slide">
-                    <%= image_tag 'pikasta・lake_3.jpg', class: 'w-100 d-block carousel-item-image', alt: 'lake3' %>
-                  </div>
-                </div>
-                <div>
-                  <a class="carousel-control-prev" href="#carousel-6" role="button" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon"></span>
-                    <span class="visually-hidden">Previous</span>
-                  </a>
-                  <a class="carousel-control-next" href="#carousel-6" role="button" data-bs-slide="next">
-                    <span class="carousel-control-next-icon"></span><span class="visually-hidden">Next</span>
-                  </a>
-                </div>
-                
-                <ol class="carousel-indicators" id="indicators-style-4" style="margin-right: 50%;margin-left: 47%;width: 30px;">
-                  <li data-bs-target="#carousel-6" data-bs-slide-to="0" class="active"></li>
-                  <li data-bs-target="#carousel-6" data-bs-slide-to="1"></li>
-                  <li data-bs-target="#carousel-6" data-bs-slide-to="2"></li>
-                </ol>
-              </div>
-              <div class="card-body d-flex align-items-center" style="padding-top: 5px;padding-bottom: 5px;height: 40px;background: #FFFFFF;">
-                <div class="d-flex justify-content-start">
-                  <a class="text-decoration-none pt-3 pe-3" href="#">
-                    <p class="fs-5 fw-bold mb-0" style="color: #9399E5;">#pikasta</p>
-                  </a>
-                  <a class="text-decoration-none pt-3 pe-3" href="#">
-                    <p class="fs-5 fw-bold mb-0" style="color: #9399E5;">#traveltoor</p>
-                  </a>
-                  <a class="text-decoration-none pt-3" href="#">
-                    <p class="fs-5 fw-bold mb-0" style="color: #9399E5;">#lake</p>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col" style="min-width: 100%;">
-            <p class="fs-5 pt-4 text-purple">コメント</p>
-            <form class="w-100">
-              <textarea placeholder="コメントを投稿..." class="rounded-3 ps-3 pt-3 md-4 pd-5 bg-white mt-4 border border-0 lh-lg box-shadow" style="font-size: 14px; min-height: 150px; min-width: 100%;"></textarea>
-              <div class="d-flex justify-content-end md-5">
-                <button class="btn text-white fs-5 bg-purple box-shadow rounded-5 mt-4 px-4" type="submit">コメントする</button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
+    <div class="col-md-3 mt-5">
+      <p class="text-main fw-bold fs-5 pt-5 mt-5"></p>
+      <!--新規投稿順サイドバー-->
+      <%= render 'layouts/sidebar_posts' %>
     </div>
-    <div class="col-md-4 mt-5">
-      <p class="text-main fw-bold fs-5 pt-5 mt-5">新規登録順</p>
-      <div class="row bg-white rounded m-3 m-md-0" style="box-shadow: 2px 2px 10px 0px #D5D5D5;">
-        <div class="col bg-white rounded p-3 box-shadow">
-          <div class="d-flex justify-content-between">
-            <div class="d-flex align-items-center side-bar">
-              <%= image_tag 'pikasta・icon1.jpg', alt: 'icon1', class: 'rounded-circle flex-shrink-0 me-3 fit-cover', style: 'width: 50px; height: 50px;' %>
-              <p class="fw-bold mb-0 fs-5" style="color: #212529;">Flower12345</p>
+    
+    <div class="col-md-9 d-flex justify-content-between">
+      <div class="col-md-11 mt-3 ms-4">
+        <div class="mt-5">
+          <div class="row">
+            <div class="col mt-5">
+              <div class="card mt-5 bg-white py-3">
+                <div class="d-flex justify-content-between px-4">
+                  <div>
+                    <%= image_tag 'pikasta・icon4.jpg', alt: 'icon4', class: 'rounded-circle flex-shrink-0 me-3 fit-cover d-inline-block', width: '59px' %>
+                    <p class="mb-0 fs-5 d-inline-block">name_acount</p>
+                    <p class="text-muted mb-0 fs-5 pt-3 mb-3">新しい家族を迎えました！</p>
+                  </div>
+                  <div class="dropdown">
+                    <button class="btn text-main bg-white" aria-expanded="false" data-bs-toggle="dropdown" type="button">
+                      <%#= displayed_svg 'config.svg' %>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-end rounded-3 pt-0 pb-0 mt-2" style="min-width: 107px; border-bottom: 2px solid #D5D5D5;">
+                      <a class="dropdown-item text-main py-3" href="#" style="font-size: 14px;border: 1px solid #D5D5D5;">
+                        <%#= displayed_svg 'detail.svg' %>
+                        詳細
+                      </a>
+                      <a class="dropdown-item text-main py-3" href="#" style="font-size: 14px;border: 1px solid #D5D5D5;">
+                        <%#= displayed_svg 'edit.svg' %>
+                        編集
+                      </a>
+                      <a class="dropdown-item text-main py-3" href="#" style="font-size: 14px; border: 1px solid #D5D5D5;">
+                        <%#= displayed_svg 'delete.svg' %>
+                        削除
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="carousel slide" data-bs-ride="false" id="carousel-5">
+                  <div class="carousel-inner" style="height: 635px;">
+                    <div class="carousel-item active img-slide">
+                      <%= image_tag 'pikasta・dog_1.jpg', class: 'w-100 d-block position-absolute carousel-item-image', alt: 'dog1' %>
+                    </div>
+                    <div class="carousel-item img-slide">
+                      <%= image_tag 'pikasta・dog_2.jpg', class: 'w-100 d-block carousel-item-image', alt: 'dog2' %>
+                    </div>
+                    <div class="carousel-item img-slide">
+                      <%= image_tag 'pikasta・dog_3.jpg', class: 'w-100 d-block carousel-item-image', alt: 'dog3' %>
+                    </div>
+                  </div>
+                  <div>
+                    <a class="carousel-control-prev" href="#carousel-5" role="button" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carousel-5" role="button" data-bs-slide="next">
+                      <span class="carousel-control-next-icon"></span><span class="visually-hidden">Next</span>
+                    </a>
+                  </div>
+                  
+                  <ol class="carousel-indicators" id="indicators-style-4" style="margin-right: 50%;margin-left: 47%;width: 30px;">
+                    <li data-bs-target="#carousel-5" data-bs-slide-to="0" class="active"></li>
+                    <li data-bs-target="#carousel-5" data-bs-slide-to="1"></li>
+                    <li data-bs-target="#carousel-5" data-bs-slide-to="2"></li>
+                  </ol>
+                </div>
+                <div class="card-body d-flex align-items-center" style="padding-top: 5px;padding-bottom: 5px;height: 40px;background: #FFFFFF;">
+                  <div class="d-flex justify-content-start">
+                    <a class="text-decoration-none pt-3 pe-3" href="#">
+                      <p class="fs-5 fw-bold mb-0" style="color: #9399E5;">#dog</p>
+                    </a>
+                    <a class="text-decoration-none pt-3 pe-3" href="#">
+                      <p class="fs-5 fw-bold mb-0" style="color: #9399E5;">#animals</p>
+                    </a>
+                    <a class="text-decoration-none pt-3" href="#">
+                      <p class="fs-5 fw-bold mb-0" style="color: #9399E5;">#cute</p>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col" style="min-width: 100%;">
+              <p class="fs-5 pt-4 text-purple">コメント</p>
+              <div class="card box-shadow bg-white rounded-3 border-0 py-3 px-4 mb-4">
+                <div class="d-flex align-items-center pt-3">
+                  <%= image_tag 'pikasta・icon1.jpg', alt: 'icon_1', class: 'rounded-circle flex-shrink-0 me-3 fit-cover', width: '35px' %>
+                  <div class="d-lg-flex" style="padding-right: 10px;">
+                    <p class="mb-0 fs-6" style="color: #444444;">Flower12345</p>
+                  </div>
+                  <div class="d-lg-flex">
+                    <p class="mb-0 ps-2 text-main" style="font-size: 14px;">2023.3.10</p>
+                  </div>
+                </div>
+                <div class="card-body pb-4 px-0">
+                  <p class="card-text text-main pt-2" style="font-size: 14px;">とっても可愛いですね！お部屋もおしゃれで素敵です。私もいつか犬を飼うのが夢です...！！</p>
+                </div>
+              </div>
+              <div class="card box-shadow bg-white rounded-3 border-0 py-3 px-4 mb-4">
+                <div class="d-flex align-items-center pt-3">
+                  <%= image_tag 'pikasta・icon4.jpg', alt: 'icon_4', class: 'rounded-circle flex-shrink-0 me-3 fit-cover', width: '35px' %>
+                  <div class="d-lg-flex" style="padding-right: 10px;">
+                    <p class="mb-0 fs-6" style="color: #444444;">name_acount</p>
+                  </div>
+                  <div class="d-lg-flex">
+                    <p class="mb-0 ps-2 text-main" style="font-size: 14px;">2023.3.10</p>
+                  </div>
+                </div>
+                <div class="card-body pb-4 px-0">
+                  <p class="card-text text-main pt-2" style="font-size: 14px;">ふわふわでたまりませんね♡うちの子に似てる！</p>
+                </div>
+              </div>
+            </div>
+            <div class="col my-4">
+              <div class="card d-flex">
+                <div class="card-body box-shadow py-4">
+                  <div class="d-flex justify-content-center align-items-center" style="font-size: 14px;">
+                    <p class="text-main">コメントを入力するには
+                      <a class="text-decoration-none text-purple" href="users/sign_in">ログイン</a>
+                      が必要です
+                    </p>
+                  </div>
+                  <div class="d-flex justify-content-center">
+                    <p class="d-flex align-items-center text-main" style="margin-bottom: 0px;font-size: 14px;">登録がまだの方は<br></p>
+                    <a class= "btn btn-primary bg-purple border-0 px-4 ms-3" href="users/sign_up">無料会員登録</a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="d-flex justify-content-between side-bar mt-3">
-            <div class="d-flex align-items-center">
-              <%= image_tag 'pikasta・icon2.jpg', alt: 'icon2', class: 'rounded-circle flex-shrink-0 me-3 fit-cover', style: 'width: 50px; height: 50px;' %>
-              <p class="fw-bold mb-0 fs-5">catcute</p>
+        </div>
+        <div>
+          <div class="row">
+            <div class="col mt-5">
+              <div class="card mt-5 bg-white py-3">
+                <div class="d-flex justify-content-between px-4">
+                  <div>
+                    <%= image_tag 'pikasta・icon8.png', alt: 'icon8', class: 'rounded-circle flex-shrink-0 me-3 fit-cover d-inline-block', width: '59px' %>
+                    <p class="mb-0 fs-5 d-inline-block">panda.0205</p>
+                    <p class="text-muted mb-0 fs-5 pt-3 mb-3">海外旅行</p>
+                  </div>
+                  <div class="dropdown">
+                    <button class="btn text-main bg-white" aria-expanded="false" data-bs-toggle="dropdown" type="button">
+                      <%#= displayed_svg 'config.svg' %>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-end rounded-3 pt-0 pb-0 mt-2" style="min-width: 107px; border-bottom: 2px solid #D5D5D5;">
+                      <a class="dropdown-item text-main py-3" href="posts/1" style="font-size: 14px;border: 1px solid #D5D5D5;">
+                        <%#= displayed_svg 'detail.svg' %>
+                        詳細
+                      </a>
+                      <a class="dropdown-item text-main py-3" href="posts/1/edit" style="font-size: 14px;border: 1px solid #D5D5D5;">
+                        <%#= displayed_svg 'edit.svg' %>
+                        編集
+                      </a>
+                      <a class="dropdown-item text-main py-3" href="#" style="font-size: 14px; border: 1px solid #D5D5D5;">
+                        <%#= displayed_svg 'delete.svg' %>
+                        削除
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="carousel slide" data-bs-ride="false" id="carousel-6">
+                  <div class="carousel-inner" style="height: 635px;">
+                    <div class="carousel-item active img-slide">
+                      <%= image_tag 'pikasta・lake_1.jpg', class: 'w-100 d-block position-absolute carousel-item-image', alt: 'lake1' %>
+                    </div>
+                    <div class="carousel-item img-slide">
+                      <%= image_tag 'pikasta・lake_2.jpg', class: 'w-100 d-block carousel-item-image', alt: 'lake2' %>
+                    </div>
+                    <div class="carousel-item img-slide">
+                      <%= image_tag 'pikasta・lake_3.jpg', class: 'w-100 d-block carousel-item-image', alt: 'lake3' %>
+                    </div>
+                  </div>
+                  <div>
+                    <a class="carousel-control-prev" href="#carousel-6" role="button" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carousel-6" role="button" data-bs-slide="next">
+                      <span class="carousel-control-next-icon"></span><span class="visually-hidden">Next</span>
+                    </a>
+                  </div>
+                  
+                  <ol class="carousel-indicators" id="indicators-style-4" style="margin-right: 50%;margin-left: 47%;width: 30px;">
+                    <li data-bs-target="#carousel-6" data-bs-slide-to="0" class="active"></li>
+                    <li data-bs-target="#carousel-6" data-bs-slide-to="1"></li>
+                    <li data-bs-target="#carousel-6" data-bs-slide-to="2"></li>
+                  </ol>
+                </div>
+                <div class="card-body d-flex align-items-center" style="padding-top: 5px;padding-bottom: 5px;height: 40px;background: #FFFFFF;">
+                  <div class="d-flex justify-content-start">
+                    <a class="text-decoration-none pt-3 pe-3" href="#">
+                      <p class="fs-5 fw-bold mb-0" style="color: #9399E5;">#pikasta</p>
+                    </a>
+                    <a class="text-decoration-none pt-3 pe-3" href="#">
+                      <p class="fs-5 fw-bold mb-0" style="color: #9399E5;">#traveltoor</p>
+                    </a>
+                    <a class="text-decoration-none pt-3" href="#">
+                      <p class="fs-5 fw-bold mb-0" style="color: #9399E5;">#lake</p>
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="d-flex justify-content-between mt-3">
-            <div class="d-flex align-items-center side-bar">
-              <%= image_tag 'pikasta・icon3.jpg', alt: 'icon3', class: 'rounded-circle flex-shrink-0 me-3 fit-cover', style: 'width: 50px; height: 50px;' %>
-              <p class="fw-bold mb-0 fs-5" style="color: #212529;">Doglove0286</p>
-            </div>
-          </div>
-          <div class="d-flex justify-content-between mt-3">
-            <div class="d-flex align-items-center side-bar">
-              <%= image_tag 'pikasta・icon4.jpg', alt: 'icon4', class: 'rounded-circle flex-shrink-0 me-3 fit-cover', style: 'width: 50px; height: 50px;' %>
-              <p class="fw-bold mb-0 fs-5" style="color: #212529;">name_acount</p>
+            <div class="col" style="min-width: 100%;">
+              <p class="fs-5 pt-4 text-purple">コメント</p>
+              <form class="w-100">
+                <textarea placeholder="コメントを投稿..." class="rounded-3 ps-3 pt-3 md-4 pd-5 bg-white mt-4 border border-0 lh-lg box-shadow" style="font-size: 14px; min-height: 150px; min-width: 100%;"></textarea>
+                <div class="d-flex justify-content-end md-5">
+                  <button class="btn text-white fs-5 bg-purple box-shadow rounded-5 mt-4 px-4" type="submit">コメントする</button>
+                </div>
+              </form>
             </div>
           </div>
         </div>
