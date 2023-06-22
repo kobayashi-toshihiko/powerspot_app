@@ -1,43 +1,137 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
-
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
-
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+<div class="container">
+  <div class="row d-flex justify-content-center">
+    <div class="col d-flex justify-content-center text-center mt-5">
+      <div class="col-10 col-md-6 mt-5">
+        <div><%= image_tag 'ps_logo.png', class: 'img-fluid', width: '50%', height: '50%' %></div>
+        <div class="col-12 text-center pb-2">
+          <p class="w-lg-50 pt-3 fs-3 text-main-color">アカウント編集</p>
+        </div>
+      </div>
+    </div>
   </div>
+  <div class="row d-flex justify-content-center">
+    <div class="col-10 col-md-6">
+      <%= form_with model: @user, url: user_registration_path, class: 'text-center mb-4' do |f| %>
+      <form class="text-center mb-4" method="post">
+        
+        <div class="div-title mb-4">
+          <p class="title-p fw-bold text-main">ユーザーネーム
+          <span class="p_required">必須</span></p>
+          <%= f.text_field :username, autofocus: true, class: "form-control py-md-3 rounded bg-white box-shadow mb-3" %>
+        </div>
+        
+        <div class="div-title mb-4">
+          <p class="title-p fw-bold text-main">メールアドレス
+          <span class="p_required">必須</span></p>
+          <%= f.email_field :email, autofocus: true, class: "form-control py-md-3 rounded bg-white box-shadow mb-3" %>
+        </div>
+        
+        <div class="div-title mb-4">
+          <p class="title-p fw-bold text-main">パスワード<span class="p_required">必須</span></p>
+          <%= f.password_field :password, autocomplete: "new-password", class: "form-control py-md-3 rounded bg-white box-shadow mb-3" %>
+        </div>
+        
+        <div class="div-title mb-4">
+          <p class="title-p fw-bold text-main">パスワード確認<span class="p_required">必須</span></p>
+          <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control py-md-3 rounded bg-white box-shadow mb-3" %>
+        </div>
+        <div class="div-title mb-4">
+          <p class="title-p fw-bold text-main">生年月日<span class="p_required">必須</span></p>
+          <%= f.text_field :birthday, autofocus: true, class: "form-control py-md-3 rounded bg-white box-shadow mb-3" %>
+        </div>
+        
+        <!--ドロップダウンのやり方を質問する-->
+        <div class="div-title mb-4">
+          <p class="title-p fw-bold text-main">血液型<span class="p_required">必須</span></p>
+          <select class="form-select" id="exampleFormSelect1">
+            <option value="1">A型</option>
+            <option value="2">B型</option>
+            <option value="3">O型</option>
+            <option value="4">AB型</option>
+          </select>
+        </div>
+        
+        <!--<div class="div-title mb-4">-->
+        <!--  <p class="title-p fw-bold text-main">血液型<span class="p_required">必須</span></p>-->
+          <!--<input class="form-control py-md-3 rounded bg-white box-shadow mb-3" type="password">-->
+        <!--  <%#= f.text_field :blood_type, autofocus: true, class: "form-control py-md-3 rounded bg-white box-shadow mb-3" %>-->
+        <!--</div>-->
 
-  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-    <% if @minimum_password_length %>
-      <br />
-      <em><%= @minimum_password_length %> characters minimum</em>
-    <% end %>
+        <!--ドロップダウンで他テーブルの連携のやり方を質問する-->
+        <div class="div-title mb-4">
+          <p class="title-p fw-bold text-main">住所(都道府県)<span class="p_required">必須</span></p>
+          <select class="form-select" id="exampleFormSelect1">
+          <option value="1">北海道</option>
+          <option value="2">青森</option>
+          <option value="3">岩手</option>
+          <option value="4">宮城</option>
+          <option value="5">秋田</option>
+          <option value="6">山形</option>
+          <option value="7">福島</option>
+          <option value="8">茨城</option>
+          <option value="9">栃木</option>
+          <option value="10">群馬</option>
+          <option value="11">埼玉</option>
+          <option value="12">千葉</option>
+          <option value="13">東京</option>
+          <option value="14">神奈川</option>
+          <option value="15">新潟</option>
+          <option value="16">富山</option>
+          <option value="17">石川</option>
+          <option value="18">福井</option>
+          <option value="19">山梨</option>
+          <option value="20">長野</option>
+          <option value="21">岐阜</option>
+          <option value="22">静岡</option>
+          <option value="23">愛知</option>
+          <option value="24">三重</option>
+          <option value="25">滋賀</option>
+          <option value="26">京都</option>
+          <option value="27">大阪</option>
+          <option value="28">兵庫</option>
+          <option value="29">奈良</option>
+          <option value="30">和歌山</option>
+          <option value="31">鳥取</option>
+          <option value="32">島根</option>
+          <option value="33">岡山</option>
+          <option value="34">広島</option>
+          <option value="35">山口</option>
+          <option value="36">徳島</option>
+          <option value="37">香川</option>
+          <option value="38">愛媛</option>
+          <option value="39">高知</option>
+          <option value="40">福岡</option>
+          <option value="41">佐賀</option>
+          <option value="42">長崎</option>
+          <option value="43">熊本</option>
+          <option value="44">大分</option>
+          <option value="45">宮崎</option>
+          <option value="46">鹿児島</option>
+          <option value="47">沖縄</option>
+          </select>
+        </div>
+        
+        <!--<div class="div-title mb-4">-->
+        <!--  <p class="title-p fw-bold text-main">住所(都道府県)<span class="p_required">必須</span></p>-->
+        <!--  <input class="form-control py-md-3 rounded bg-white box-shadow mb-3" type="text">-->
+        <!--</div>-->
+        
+        <div class="d-flex img-select">
+          <div>
+            <p class="fw-bold mb-4 text-main">ユーザー画像登録<span class="p_required">必須</span></p>
+            <input type="file">
+          </div>
+        </div>
+        <div class="div-title mb-4 mt-4">
+          <p class="title-p fw-bold text-main">自己紹介</p>
+          <%= f.text_field :profile, autofocus: true, class: "form-control py-md-3 rounded bg-white box-shadow mb-3" %>
+        </div>
+        
+        <div class="col-12 d-flex justify-content-center">
+          <button class="btn d-block rounded fw-bold box-shadow text-white mt-4 px-5 py-3 fs-6 bg-main" type="submit">編集</button>
+        </div>
+      </form>
+      <% end %>
+    </div>
   </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-    <%= f.password_field :current_password, autocomplete: "current-password" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Update" %>
-  </div>
-<% end %>
-
-<h3>Cancel my account</h3>
-
-<div>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?", turbo_confirm: "Are you sure?" }, method: :delete %></div>
-
-<%= link_to "Back", :back %>
+</div>
