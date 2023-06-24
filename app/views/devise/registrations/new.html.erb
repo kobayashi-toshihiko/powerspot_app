@@ -43,7 +43,7 @@
         <!--ドロップダウン 血液型 -->
         <div class="div-title mb-4">
           <p class="title-p fw-bold text-main">血液型<span class="p_required">必須</span></p>
-          <%= f.select :blood_type, {'A型': 1, 'B型': 2, 'O型': 3, 'AB型': 4}, {include_blank: '選択してください'}, { class: 'form-select' , required: true } %>
+          <%= f.select :blood_type, [['A型', 1], ['B型', 2], ['O型', 3], ['AB型', 4]], {include_blank: '選択してください'}, { class: 'form-select'} %>
         </div>
         
         <!--元コード-->
@@ -61,7 +61,7 @@
         <div class="div-title mb-4">
           <p class="title-p fw-bold text-main">住所(都道府県)<span class="p_required">必須</span></p>
           <%= f.select :prefecture_id, Prefecture.all.map { |prefecture| [prefecture.name, prefecture.id] }, {include_blank: '選択してください'}, { class: 'form-select' } %>
-         </div>
+        </div>
          
         <!--元コード-->
         <!--<div class="div-title mb-4">-->
