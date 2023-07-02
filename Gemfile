@@ -39,3 +39,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Auth Gems
 gem 'devise'
+
+# Image uploader
+gem 'carrierwave', '~> 2.0'
