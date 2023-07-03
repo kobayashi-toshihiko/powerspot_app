@@ -40,7 +40,7 @@
                   <!--年選択-->
                   <!--1980年に指定-->
                   <% @selected_year = '1980' %>
-                  <%= f.select :year, options_for_select((@oldest_year..@youngest_year).to_a.reverse, @selected_year), {}, {class: "form-select text-left py-2 fw-bold form-select-lg border border-secondary border-2", style: "border-radius: 0.5rem"} %>
+                  <%= f.select :year, options_for_select((1935..2022).to_a.reverse, @selected_year), {}, {class: "form-select text-left py-2 fw-bold form-select-lg border border-secondary border-2", style: "border-radius: 0.5rem"} %>
                 </div>
                 
                 <!--月選択-->
