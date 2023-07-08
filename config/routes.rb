@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
   root 'power_spots#index'
-  get 'power_spots/prefecture_powerspot', to: 'power_spots#prefecture_powerspot'
-  resources :power_spots, only: [:index, :new, :create]
+  namespace :power_spots do
+    resources :prefecture_powerspot, only: [:index]
+  end
+  resources :power_spots, only: [:index]
 end
