@@ -1,12 +1,31 @@
 <div class="category text-center mb-3">
   <!--<p>都道府県別<br>パワースポット一覧</p>-->
-  <a href="/power_spots/prefecture_powerspot" style="text-decoration: none;"><p>都道府県別<br>パワースポット一覧</p></a>
+  <!--<a href="/power_spots/prefecture_powerspot" style="text-decoration: none;"><p>都道府県別<br>パワースポット一覧</p></a>-->
+  <%= link_to prefectures_path, style: "text-decoration: none;" do %>
+    <p>
+      都道府県別
+      <br>
+      パワースポット一覧
+    </p>
+  <% end %>
 </div>
 <div class="category text-center mb-3">
-  <p>ご利益別<br>パワースポット</p>
+  <!--<p>ご利益別<br>パワースポット</p>-->
+  <%= link_to "#", style: "text-decoration: none;" do %>
+  <p>
+    ご利益別
+    <br>
+    パワースポット
+  </p>
+  <% end %>
 </div>
 <div class="category text-center mb-3">
-  <p>人気パワースポット<br>ランキング</p>
+  <%= link_to "#", style: "text-decoration: none;" do %>
+  <p>人気パワースポット
+    <br
+    >ランキング
+  </p>
+  <% end %>
 </div>
 
 <!--新着投稿-->
