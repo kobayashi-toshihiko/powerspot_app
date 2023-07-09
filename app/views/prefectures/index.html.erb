@@ -1,0 +1,232 @@
+<div class="container mt-5">
+  <div class="row justify-content-between">
+    <div class="col-md-3 mt-5">
+      <p class="text-main fw-bold"></p>
+      <!--新規投稿順サイドバー-->
+      <%= render 'layouts/sidebar_posts' %>
+    </div>
+    
+    <div class="col-md-9 d-flex justify-content-between mt-3">
+      <div class="col-md-11 ms-4">
+        <div class="row">
+
+          <!--都道府県別パワースポット一覧-->
+          <section id="attribute_compatibility">
+            <div class="d-block border border-primary mt-5 text-center pt-2">
+              <h5 class="h4">パワースポット一覧</h5>
+            </div>
+            <h5 class="mt-4 border-bottom border-primary p-2">パワースポットを検索する</h5>
+            <div class="row mt-5">
+              <div class="col-md-12">
+                <%= image_tag 'japanmap.png', class: 'w-100 d-block carousel-item-image', alt: 'japanMap' %>
+              </div>
+
+              <div class="area_hokkaido">
+                <div class="hokkaido">
+                  <p class="ja-map_ttl">
+                    <a href="#">北海道</a>
+                  </p>
+                </div>
+              </div>
+
+              <div class="area_chubu">
+                <div class="chubu1 ja-map_link">
+                  <p class="ja-map_ttl">
+                    <a href="#">富山県</a>
+                  </p>
+                  <p class="ja-map_ttl">
+                    <a href="#">石川県</a>
+                  </p>
+                  <p class="ja-map_ttl">
+                    <a href="#">福井県</a>
+                  </p>
+                </div>
+                <div class="chubu2 ja-map_link">
+                  <p class="ja-map_ttl">
+                    <a href="#">新潟県</a>
+                  </p>
+                  <p class="ja-map_ttl">
+                    <a href="#">長野県</a>
+                  </p>
+                  <p class="ja-map_ttl">
+                    <a href="#">山梨県</a>
+                  </p>
+                </div>
+                <div class="chubu3 ja-map_link">
+                  <p class="ja-map_ttl">
+                    <a href="#">静岡県</a>
+                  </p>
+                  <p class="ja-map_ttl">
+                    <a href="#">岐阜県</a>
+                  </p>
+                  <p class="ja-map_ttl">
+                    <a href="#">愛知県</a>
+                  </p>
+                </div>
+              </div>
+              
+              <div class="area_chugoku">
+                <div class="chugoku1 ja-map_link">
+                  <p class="ja-map_ttl">
+                    <a href="#">鳥取県</a>
+                  </p>
+                  <p class="ja-map_ttl">
+                    <a href="#">島根県</a>
+                  </p>
+                </div>
+                <div class="chugoku2 ja-map_link">
+                  <p class="ja-map_ttl">
+                    <a href="#">岡山県</a>
+                  </p>
+                  <p class="ja-map_ttl">
+                    <a href="#">広島県</a>
+                  </p>
+                </div>
+                <div class="chugoku3 ja-map_link">
+                  <p class="ja-map_ttl">
+                    <a href="#">山口県</a>
+                  </p>
+                </div>                  
+              </div>
+              
+              <div class="area_kyusyu">
+                <div class="kyusyu1 ja-map_link">
+                  <p class="ja-map_ttl">
+                    <a href="#">福岡県</a>
+                  </p>
+                  <p class="ja-map_ttl">
+                    <a href="#">佐賀県</a>
+                  </p>
+                  <p class="ja-map_ttl">
+                    <a href="#">長崎県</a>
+                  </p>
+                  <p class="ja-map_ttl">
+                    <a href="#">大分県</a>
+                  </p>
+                </div>
+                <div class="kyusyu2 ja-map_link">
+                  <p class="ja-map_ttl">
+                    <a href="#">宮崎県</a>
+                  </p>
+                  <p class="ja-map_ttl">
+                    <a href="#">熊本県</a>
+                  </p>
+                  <p class="ja-map_ttl">
+                    <a href="#">鹿児島県</a>
+                  </p>
+                </div>
+              </div>
+              <div class="area_okinawa">
+                <div class="okinawa">
+                  <p class="ja-map_ttl">
+                    <a href="#">沖縄県</a>
+                  </p>
+                </div>
+              </div>
+
+              <div class="area_shikoku">
+                <div class="shikoku1 ja-map_link">
+                  <p class="ja-map_ttl">
+                    <a href="#">香川県</a>
+                  </p>
+                  <p class="ja-map_ttl">
+                    <a href="#">徳島県</a>
+                  </p>
+                </div>
+                <div class="shikoku2 ja-map_link">
+                  <p class="ja-map_ttl">
+                    <a href="#">愛媛県</a>
+                  </p>
+                  <p class="ja-map_ttl">
+                    <a href="#">高知県</a>
+                  </p>
+                </div>
+              </div>
+
+              <div class="area_kansai">
+                <div class="kansai1 ja-map_link">
+                  <p class="ja-map_ttl">
+                    <a href="#">滋賀県</a>
+                  </p>
+                  <p class="ja-map_ttl">
+                    <a href="#">三重県</a>
+                  </p>
+                  <p class="ja-map_ttl">
+                    <a href="#">奈良県</a>
+                  </p>
+                  <p class="ja-map_ttl">
+                    <a href="#">和歌山県</a>
+                  </p>
+                </div>
+                <div class="kansai2 ja-map_link">
+                  <p class="ja-map_ttl">
+                    <a href="#">京都府</a>
+                  </p>
+                  <p class="ja-map_ttl">
+                    <a href="#">大阪府</a>
+                  </p>
+                  <p class="ja-map_ttl">
+                    <a href="#">兵庫県</a>
+                  </p>
+                </div>
+              </div>
+
+              <div class="area_kantou">
+                <div class="kansai1 ja-map_link">
+                  <p class="ja-map_ttl">
+                    <a href="#">栃木県</a>
+                  </p>
+                  <p class="ja-map_ttl">
+                    <a href="#">群馬県</a>
+                  </p>
+                  <p class="ja-map_ttl">
+                    <a href="#">埼玉県</a>
+                  </p>
+                  <p class="ja-map_ttl">
+                    <a href="#">東京都</a>
+                  </p>
+                </div>
+                <div class="kansai2 ja-map_link">
+                  <p class="ja-map_ttl">
+                    <a href="#">茨城県</a>
+                  </p>
+                  <p class="ja-map_ttl">
+                    <a href="#">千葉県</a>
+                  </p>
+                  <p class="ja-map_ttl">
+                    <a href="#">神奈川県</a>
+                  </p>
+                </div>
+              </div>
+
+              <div class="area_tohoku">
+                <div class="tohoku1 ja-map_link">
+                  <p class="ja-map_ttl">
+                    <a href="#">青森県</a>
+                  </p>
+                  <p class="ja-map_ttl">
+                    <a href="#">秋田県</a>
+                  </p>
+                  <p class="ja-map_ttl">
+                    <a href="#">山形県</a>
+                  </p>
+                </div>
+                <div class="tohoku2 ja-map_link">
+                  <p class="ja-map_ttl">
+                    <a href="#">岩手県</a>
+                  </p>
+                  <p class="ja-map_ttl">
+                    <a href="#">宮城県</a>
+                  </p>
+                  <p class="ja-map_ttl">
+                    <a href="#">福島県</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

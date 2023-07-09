@@ -81,5 +81,63 @@
 }
 
 .maintitle_comment {
-  margin-top: 170px;
+  margin-top: 150px;
+}
+
+.ja-map_ttl {
+    margin-bottom: 10px;
+}
+
+.ja-map_link {
+    float: left;
+    padding-right: 30px;
+}
+
+.area_hokkaido, .area_chubu, .area_chubu, .area_chugoku, .area_kyusyu, .area_okinawa, .area_shikoku, .area_kansai, .area_kantou, .area_tohoku {
+    position: absolute;
+}
+
+.area_hokkaido {
+    top: 360px;
+    left: 880px;
+}
+
+.area_chubu {
+    top: 500px;
+    left: 700px;
+}
+
+.area_chugoku {
+    top: 665px;
+    left: 500px;
+}
+
+.area_kyusyu {
+    top: 820px;
+    left: 470px;
+}
+
+.area_okinawa {
+    top: 1055px;
+    left: 755px;
+}
+
+.area_shikoku {
+    top: 910px;
+    left: 775px;
+}
+
+.area_kansai {
+    top: 935px;
+    left: 990px;
+}
+
+.area_kantou {
+    top: 740px;
+    left: 1095px;
+}
+
+.area_tohoku {
+    top: 570px;
+    left: 1095px;
 }

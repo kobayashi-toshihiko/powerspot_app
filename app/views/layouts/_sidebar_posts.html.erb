@@ -1,36 +1,49 @@
 <div class="category text-center mb-3">
-  <p>都道府県別<br>パワースポット一覧</p>
+  <%= link_to prefectures_path, style: "text-decoration: none;" do %>
+    <p>
+      都道府県別
+      <br>
+      パワースポット一覧
+    </p>
+  <% end %>
 </div>
 <div class="category text-center mb-3">
-  <p>ご利益別<br>パワースポット</p>
+  <%= link_to "#", style: "text-decoration: none;" do %>
+  <p>
+    ご利益別
+    <br>
+    パワースポット
+  </p>
+  <% end %>
 </div>
 <div class="category text-center mb-3">
-  <p>人気パワースポット<br>ランキング</p>
+  <%= link_to "#", style: "text-decoration: none;" do %>
+  <p>人気パワースポット
+    <br
+    >ランキング
+  </p>
+  <% end %>
 </div>
 
 <!--新着投稿-->
 <div class="articles text-center mb-3 "><p>新着投稿</p>
   <div class="text-start mt-3 mb-3">
-    <a href=#>【縁結び】群馬最強のパワースポット水澤寺</a>
+    <%= link_to "【縁結び】群馬最強のパワースポット水澤寺", "#" %>
   </div>
   <div class="text-start mt-3 mb-3">
-    <a href=#>【浄化】東京でも自然のパワーを感じるスポット深大寺</a>
+    <%= link_to "【浄化】東京でも自然のパワーを感じるスポット深大寺", "#" %>
   </div>
   <div class="text-start mt-3 mb-3">
-    <a href=#>【浄化】東京有数の自然のパワーポット明治神宮</a>
+    <%= link_to "【浄化】東京有数の自然のパワーポット明治神宮", "#" %>
   </div>
 </div>
 
 <!--最近のコメント-->
 <div class="articles text-center mb-3"><p>最近のコメント</p>
   <div class="text-start mt-3 mb-3">
-    <a href=#>
-      【縁結び】御利益は芸能だけじゃない！縁結びの御利益もあるパワースポット荒立神社 にtoshiさんがコメントしました。
-    </a>
+    <%= link_to "【縁結び】御利益は芸能だけじゃない！縁結びの御利益もあるパワースポット荒立神社 にtoshiさんがコメントしました。", "#" %>
   </div>
   <div class="text-start mt-3 mb-3">
-    <a href=#>
-      【開運】【縁結び】恋愛パワーをチャージしたいときにオススメ人気のパワースポット吉備津神社！！【岡山県】にakiさんがコメントしました。
-    </a>
+    <%= link_to "【開運】【縁結び】恋愛パワーをチャージしたいときにオススメ人気のパワースポット吉備津神社！！【岡山県】にakiさんがコメントしました。", "#" %>
   </div>
 </div>
