@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_07_09_094523) do
+ActiveRecord::Schema.define(version: 2023_07_10_133454) do
 
   create_table "areas", charset: "utf8mb4", force: :cascade do |t|
     t.string "name", null: false
@@ -56,14 +56,16 @@ ActiveRecord::Schema.define(version: 2023_07_09_094523) do
     t.string "image1", null: false
     t.string "image2"
     t.string "image3"
-    t.bigint "attribute_id", null: false
+    t.bigint "element_id", null: false
     t.bigint "category_blessing_id", null: false
     t.bigint "prefecture_id", null: false
+    t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["attribute_id"], name: "index_power_spots_on_attribute_id"
     t.index ["category_blessing_id"], name: "index_power_spots_on_category_blessing_id"
+    t.index ["element_id"], name: "index_power_spots_on_element_id"
     t.index ["prefecture_id"], name: "index_power_spots_on_prefecture_id"
+    t.index ["user_id"], name: "index_power_spots_on_user_id"
   end
 
   create_table "prefectures", charset: "utf8mb4", force: :cascade do |t|
@@ -86,7 +88,7 @@ ActiveRecord::Schema.define(version: 2023_07_09_094523) do
     t.string "birthday", null: false
     t.string "blood_type", null: false
     t.text "profile"
-    t.string "avatar", null: false
+    t.text "avatar", null: false
     t.bigint "prefecture_id", null: false
     t.bigint "element_id"
     t.index ["element_id"], name: "index_users_on_element_id"
@@ -98,8 +100,9 @@ ActiveRecord::Schema.define(version: 2023_07_09_094523) do
   add_foreign_key "comments", "power_spots"
   add_foreign_key "comments", "users"
   add_foreign_key "power_spots", "category_blessings"
-  add_foreign_key "power_spots", "elements", column: "attribute_id"
+  add_foreign_key "power_spots", "elements"
   add_foreign_key "power_spots", "prefectures"
+  add_foreign_key "power_spots", "users"
   add_foreign_key "prefectures", "areas"
   add_foreign_key "users", "elements"
   add_foreign_key "users", "prefectures"

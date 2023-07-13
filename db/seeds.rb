@@ -33,4 +33,9 @@ prefecture_names.each do |prefecture_name|
   Prefecture.find_or_create_by!(name: prefecture_name[:name], area_id: prefecture_name[:area_id])
 end
 
-# Prefecture.create(name: '北海道', area_id: 1)
+Prefecture.create(name: '北海道', area_id: 1)
+
+
+Element.create(name: '火属性', descript: 'test', kami: 'test', personal: 'test', match_attr: 'test', better_job: 'test')
+CategoryBlessing.create(name: '金運')
+PowerSpot.create(name: '摩周湖', address: 'test', main_title: '【摩周湖】晴れてたら幸運！霧に覆われているパワースポット裏摩周【神池】', sub_title: 'sub_title', main_descript: '摩周湖自体もパワースポットとして有名ですが、今回は裏摩周について紹介していきたいと思います。摩周湖は、湧き出る伏流水が多いことから、北海道の厳しい冬でも凍ることなく、青く透明度の高い湖を臨むことができます。', blessing_descript: 'blessingtest', access_info: 'accesstest', image1: File.open(Rails.root.join('test', 'fixtures', 'files', 'LakeMashu1.jpg')), element_id: 1, category_blessing_id: 1, prefecture_id: 1, user_id: 1)

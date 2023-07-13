@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   root 'power_spots#index'
   resources :prefectures, only: :show do
-    resources :spots, only: :index
+    resources :power_spots, only: [:index, :show], controller: 'prefectures/power_spots' 
   end
   resources :prefectures, only: [:index, :show]
   resources :power_spots, only: [:index]
