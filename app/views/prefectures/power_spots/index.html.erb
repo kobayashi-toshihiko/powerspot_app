@@ -9,9 +9,8 @@
     <div class="col-md-9 d-flex justify-content-between mt-3">
       <div class="col-md-11 ms-4">
         <div class="row">
-
           <!--都道府県別パワースポット一覧-->
-            <% @power_spots.each do |power_spot| %>
+          <% @power_spots.each do |power_spot| %>
             <section id="attribute_compatibility">
               <h5 class="mt-5 border-bottom border-primary p-2"><%= @prefecture.name %>のパワースポット記事一覧</h5>
               <div class="d-block border border-primary mt-5">
@@ -27,7 +26,6 @@
               <div class="row mt-2 mb-3">
                 <div class="col-md-4 mt-1">
                   <!--<img src='status.png'>-->
-                  <%#= image_tag 'LakeMashu1.jpg', class: 'w-100 d-block carousel-item-image', alt: 'LakeMashu1' %>
                   <%= image_tag power_spot.image1_url, class: 'w-100 d-block carousel-item-image', alt: 'LakeMashu1' %>
                 </div>
                 <div class="col-md-8">
