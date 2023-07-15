@@ -21,3 +21,5 @@ echo "executing migrate"
 bundle exec rails db:migrate
 
 echo "render-build.sh: done"
+
+bundle exec rails db:seed
