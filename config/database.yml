@@ -48,8 +48,13 @@ test:
 # Read https://guides.rubyonrails.org/configuring.html#configuring-a-database
 # for a full overview on how database connection configuration can be specified.
 #
+# production:
+#   <<: *default
+#   database: powerspot_app_production
+#   username: powerspot_app
+#   password: <%= ENV['POWERSPOT_APP_DATABASE_PASSWORD'] %>
 production:
   <<: *default
-  database: powerspot_app_production
-  username: powerspot_app
-  password: <%= ENV['POWERSPOT_APP_DATABASE_PASSWORD'] %>
+  adapter: postgresql
+  encoding: unicode
+  url: <%= ENV['DATABASE_URL'] %>
