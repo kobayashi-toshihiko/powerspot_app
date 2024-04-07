@@ -13,8 +13,30 @@ class Users::RegistrationsController < Devise::RegistrationsController
   
   def create
     build_resource(sign_up_params)
+    
     # elementに計算式を入れる
     # binding.pry
+    # railsデフォルトのデバッグツール
+    # debugger
+    
+    # これで値が取れる
+    # resource.birthday
+    # resource.blood_type
+    
+    # binding.pry
+    
+    # ロジックの結果
+    # TODO:ロジックを書く
+    # ユーザ登録した後の生年月日と血液型は以下で取り出せる
+    # [4] pry(#<Users::RegistrationsController>)> params[:user][:birthday]
+    # => "19811101"
+    # [5] pry(#<Users::RegistrationsController>)> params[:user][:blood_type]                                                                                 
+    # => "4"
+    data_id = 1
+    element = Element.find(data_id)
+    resource.element_id = element.id
+    
+    # resource.save
     resource.save
     yield resource if block_given?
     if resource.persisted?
