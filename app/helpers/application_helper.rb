@@ -8,4 +8,10 @@ module ApplicationHelper
     end
     doc.to_html.html_safe
   end
+  
+  def class_color(element)
+    elements = { 地: "text-warning", 水: "text-primary", 火: "text-danger", 風: "text-success" }
+    # binding.pry
+    elements[:"#{element}"]
+  end
 end

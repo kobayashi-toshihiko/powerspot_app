@@ -43,6 +43,8 @@ gem 'devise'
 # Image uploader
 gem 'carrierwave', '~> 2.0'
 
+gem 'pry-rails'
+
 group :production do
   gem 'pg', '1.2.3'
 end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_07_10_133454) do
+ActiveRecord::Schema.define(version: 2023_07_16_061625) do
 
   create_table "areas", charset: "utf8mb4", force: :cascade do |t|
     t.string "name", null: false
@@ -47,7 +47,7 @@ ActiveRecord::Schema.define(version: 2023_07_10_133454) do
 
   create_table "power_spots", charset: "utf8mb4", force: :cascade do |t|
     t.string "name", null: false
-    t.string "address", null: false
+    t.text "address", null: false
     t.string "main_title", null: false
     t.string "sub_title", null: false
     t.text "main_descript", null: false
